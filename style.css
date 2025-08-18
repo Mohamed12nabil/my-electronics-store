@@ -63,4 +63,69 @@ header {
   color: white;
   font-weight: bold;
   margin-top: 5px;
+  footer {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* يجعل الأيقونات باللون الأبيض */
+    transition: transform 0.3s;
+  }
+
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+  .social-icons {
+    position: fixed; /* تثبيت الأيقونات بالنسبة للنافذة */
+    bottom: 20px; /* المسافة من الأسفل */
+    left: 20px; /* المسافة من اليسار */
+    display: flex;
+    gap: 15px; /* مسافة بين الأيقونات */
+    background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 1000; /* لضمان ظهورها فوق العناصر */
+  }
+
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    transition: transform 0.3s;
+  }
+
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+}
+.social-icons {
+  position: fixed; /* تثبيت الأيقونات بالنسبة للنافذة */
+  bottom: 20px; /* المسافة من الأسفل */
+  left: 20px; /* المسافة من اليسار */
+  display: flex;
+  gap: 15px; /* مسافة بين الأيقونات */
+  background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 1000; /* لضمان ظهورها فوق العناصر */
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
 }
