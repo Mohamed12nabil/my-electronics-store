@@ -46,3 +46,23 @@ function addToCart(productId) {
 }
 
 displayProducts();
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+function updateCartCount() {
+  const count = Object.values(cart).reduce((acc, qty) => acc + qty, 0);
+  document.getElementById("cart-count").textContent = `السلة: ${count}`;
+}
+
+function addToCart(productId) {
+  if (cart[productId]) {
+    cart[productId]++;
+  } else {
+    cart[productId] = 1;
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+  alert(`تم إضافة المنتج إلى السلة!`);
+}
+
+displayProducts();
+updateCartCount();

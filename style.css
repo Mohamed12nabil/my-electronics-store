@@ -59,3 +59,8 @@ header {
 .product-card button:hover {
   background-color: #0056b3;
 }
+#cart-count {
+  color: white;
+  font-weight: bold;
+  margin-top: 5px;
+}
