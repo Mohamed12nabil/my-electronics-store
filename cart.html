@@ -1,0 +1,14 @@
+const products = [ { id: 1, name: "Product A", price: 50, image:
+"images/product1.jpg" }, { id: 2, name: "Product B", price: 75, image:
+"images/product2.jpg" } ]; const productList =
+document.getElementById("product-list"); products.forEach(product => { const
+card = document.createElement("div"); card.classList.add("product-card");
+card.innerHTML = ` card.innerHTML = `
+<img src="${product.image}" alt="${product.name}" width="100%" />
+<h3>${product.name}</h3>
+<p>$${product.price}</p>
+`<button onclick="addToCart($product.id)">Add to Cart</button>` ;
+productList.appendChild(card); }); function addToCart(productId) { let cart =
+JSON.parse(localStorage.getItem("cart")) || []; cart.push(productId);
+localStorage.setItem("cart", JSON.stringify(cart)); alert("Product added to
+cart!"); }
