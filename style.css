@@ -123,5 +123,5 @@ footer {
   padding: 20px 0;
   text-align: center; /* ← دي أهم واحدة */
   font-size: 14px;
-  direction: rtl; /* لو الموقع كله باللغة العربية */
+  direction: rtl; /* تجربه لو الموقع كله باللغة العربية */
 }

@@ -42,7 +42,7 @@ function displayProducts() {
 
 function addToCart(productId) {
   const product = products.find((p) => p.id === productId);
-  alert(`تم إضافة المنتج "${product.name}" إلى السلة!`);
+  alert(` تم إضافة المنتج بنجاح "${product.name}" إلى السلة!`);
 }
 
 displayProducts();
