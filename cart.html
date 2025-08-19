@@ -12,3 +12,54 @@ productList.appendChild(card); }); function addToCart(productId) { let cart =
 JSON.parse(localStorage.getItem("cart")) || []; cart.push(productId);
 localStorage.setItem("cart", JSON.stringify(cart)); alert("Product added to
 cart!"); }
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>عربة التسوق</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="cart.html">السلة</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>عربة التسوق</h1>
+      <div id="cart-items"></div>
+      <div id="cart-total"></div>
+    </main>
+
+    <script>
+      const cart = JSON.parse(localStorage.getItem("cart")) || {};
+      const products = JSON.parse(localStorage.getItem("products")) || [];
+      const cartItemsDiv = document.getElementById("cart-items");
+      const cartTotalDiv = document.getElementById("cart-total");
+
+      let total = 0;
+      for (let id in cart) {
+        const product = products.find((p) => p.id == id);
+        if (product) {
+          const quantity = cart[id];
+          const price = product.price * quantity;
+          total += price;
+
+          cartItemsDiv.innerHTML += `
+          <div>
+            <h3>${product.name}</h3>
+            <p>الكمية: ${quantity}</p>
+            <p>السعر: ${price} جنيه</p>
+            <hr>
+          </div>
+        `;
+        }
+      }
+
+      cartTotalDiv.innerHTML = `<h3>الإجمالي: ${total} جنيه</h3>`;
+    </script>
+  </body>
+</html>

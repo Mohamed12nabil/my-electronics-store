@@ -57,75 +57,71 @@ header {
 }
 
 .product-card button:hover {
-  background-color: #0056b3;
+  background-color: #adcadd;
 }
 #cart-count {
   color: white;
   font-weight: bold;
   margin-top: 5px;
-  footer {
-    background-color: #222;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-  }
-
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1); /* يجعل الأيقونات باللون الأبيض */
-    transition: transform 0.3s;
-  }
-
-  .social-icons a:hover img {
-    transform: scale(1.2);
-  }
-  .social-icons {
-    position: fixed; /* تثبيت الأيقونات بالنسبة للنافذة */
-    bottom: 20px; /* المسافة من الأسفل */
-    left: 20px; /* المسافة من اليسار */
-    display: flex;
-    gap: 15px; /* مسافة بين الأيقونات */
-    background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
-    padding: 10px 15px;
-    border-radius: 8px;
-    z-index: 1000; /* لضمان ظهورها فوق العناصر */
-  }
-
-  .social-icons a img {
-    width: 30px;
-    height: 30px;
-    filter: invert(1);
-    transition: transform 0.3s;
-  }
-
-  .social-icons a:hover img {
-    transform: scale(1.2);
-  }
 }
-.social-icons {
-  position: fixed; /* تثبيت الأيقونات بالنسبة للنافذة */
-  bottom: 20px; /* المسافة من الأسفل */
-  left: 20px; /* المسافة من اليسار */
+footer {
+  background-color: #222;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.top-social-icons {
+  position: fixed;
+  top: 10px;
+  left: 10px;
   display: flex;
-  gap: 15px; /* مسافة بين الأيقونات */
-  background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
-  padding: 10px 15px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
   border-radius: 8px;
-  z-index: 1000; /* لضمان ظهورها فوق العناصر */
+  z-index: 9999;
 }
 
-.social-icons a img {
-  width: 30px;
-  height: 30px;
-  filter: invert(1);
+.top-social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* يخليها بيضاء */
   transition: transform 0.3s;
 }
 
-.social-icons a:hover img {
+.top-social-icons a:hover img {
   transform: scale(1.2);
+}
+
+.navbar {
+  background-color: #e0f1ce;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #00bcd4;
+}
+footer {
+  background-color: #251818;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center; /* ← دي أهم واحدة */
+  font-size: 14px;
+  direction: rtl; /* لو الموقع كله باللغة العربية */
 }
